@@ -1,0 +1,17 @@
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\obj\Debug\JobOpportunities.BLL.csprojAssemblyReference.cache
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\obj\Debug\JobOpportunities.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.BLL.dll
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.BLL.pdb
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.Core.dll
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.DAL.dll
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.Entities.dll
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\EntityFramework.dll
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.Core.pdb
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.Core.dll.config
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.DAL.pdb
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.DAL.dll.config
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\JobOpportunities.Entities.pdb
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\bin\Debug\EntityFramework.xml
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\obj\Debug\JobOpportunities.BLL.csproj.CopyComplete
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\obj\Debug\JobOpportunities.BLL.dll
+C:\Users\Hakki Sahin\source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.BLL\obj\Debug\JobOpportunities.BLL.pdb
