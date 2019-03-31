@@ -1,0 +1,58 @@
+﻿@model JobOpportunities.UI.MVC.Models.Student_JobOpportunityViewList
+
+@{
+    ViewBag.Title = "ShowDetail";
+    Layout = "~/Views/Shared/_LayoutAdvisor.cshtml";
+}
+
+<h2>ShowDetail</h2>
+
+<div>
+    <h4>Student_JobOpportunityViewList</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobOpportunityID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobOpportunityID)
+        </dd>
+
+    </dl>
+</div>
+<h4 style="color:green">Onaylayanlar</h4>
+@foreach (var item in Model.Check)
+{
+
+    <span><strong>@item.StudentID</strong></span>
+
+    <input type="button" value="CV indir" style="float:right !important" class="btn btn-success" />
+
+}
+<hr />
+<h4 style="color:red">Onaylamayanlar</h4>
+
+@foreach (var item in Model.Notcheck)
+{
+
+    <p>
+        <span class="mr-5"><strong>@item.StudentID</strong></span>
+
+        <span class="ml-5">Reddetme Nedeni :  @item.Description</span>
+    </p>
+
+}
+<hr />
+<h4 style="color:gray">Görmeyenler</h4>
+@foreach (var item in Model.BoolNull)
+{
+
+    <span><strong>@item.StudentID</strong></span>
+
+    <p>Dönüş Yapılmadı</p>
+
+
+}
+
+</table>

@@ -1,0 +1,44 @@
+﻿@using JobOpportunities.Entities
+@model IEnumerable<JobOpportunity>
+
+@{
+    ViewBag.Title = "İş Fırsatları";
+    Layout = "~/Views/Shared/_LayoutAdvisor.cshtml";
+}
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    <div class="container">
+        <div class="form-group">
+            <br />
+            @Html.DropDownList("DepartmentID", (IEnumerable<SelectListItem>)ViewBag.Departments, new { @class = "form-control" })
+        </div>
+
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>İş Fırsatı</th>
+                    <th>Davet Gönder</th>
+                    <th>Katılımı Gör</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (JobOpportunity item in Model)
+                {
+                    <tr>
+                        <td>@item.JobOpportunityID</td>
+                        <td>@Html.ActionLink("Davet Gönder", "#")</td>
+                        <td>@Html.ActionLink("Katılımı Gör", "ShowDetail",new {guidID= "49da4fc6-954b-4f12-b53a-13cb7ddf0c71" })</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    }
+</div>
+

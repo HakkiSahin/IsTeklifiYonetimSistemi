@@ -1,0 +1,21 @@
+﻿@using JobOpportunities.Entities
+@model IEnumerable<JobOpportunity>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+}
+<div class="mt-5">
+
+    @foreach (JobOpportunity item in Model)
+    {
+       
+        <div class="card">
+            <div class="card-header">
+                <span>@item.CompanyName</span>
+                <input type="button" class="btn btn-info" value="Detay" id="" style="float:right !important" onclick="location.href='@Url.Action("DetayGoster",new {jobID=item.JobOpportunityID})'" />
+            </div>
+        </div>
+    }
+</div>
+

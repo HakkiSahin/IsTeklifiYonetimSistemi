@@ -1,0 +1,158 @@
+﻿@model JobOpportunities.UI.MVC.Models.StudentViewModel
+
+
+@{
+    ViewBag.Title = "StudentInformation";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+}
+
+<h2>StudentInformation</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>StudentViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.IsActive, new { htmlAttributes = new { @class = "form-control", id = "isActive", name = "isActive" } })
+                @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MilitaryState, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MilitaryState, new { htmlAttributes = new { @class = "form-control", id = "military", name = "military" } })
+                @Html.ValidationMessageFor(model => model.MilitaryState, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StateDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StateDescription, new { htmlAttributes = new { @class = "form-control", id = "state", name = "state" } })
+                @Html.ValidationMessageFor(model => model.StateDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MinimumWage, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MinimumWage, new { htmlAttributes = new { @class = "form-control", id = "min", name = "min" } })
+                @Html.ValidationMessageFor(model => model.MinimumWage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TotalExperience, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TotalExperience, new { htmlAttributes = new { @class = "form-control", id = "total", name = "total" } })
+                @Html.ValidationMessageFor(model => model.TotalExperience, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Languages, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @foreach (var item in Model.Languages)
+                {
+                    <label><input type="checkbox" name="@item.LanguageID" id="@item.LanguageID" value="@item.LanguageID"> @item.LanguageName</label>
+                }
+                @Html.ValidationMessageFor(model => model.Languages, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Skills, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @foreach (var item in Model.Skills)
+                {
+                    <label><input type="checkbox" name="s_@item.SkillID" id="s_@item.SkillID" value="@item.SkillID"> @item.SkillName</label>
+                }
+                @Html.ValidationMessageFor(model => model.Skills, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cities, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @foreach (var item in Model.Cities)
+                {
+                    <label><input type="checkbox" name="c_@item.CityID" id="c_@item.CityID" value="@item.CityID"> @item.CityName</label>
+                }
+                @Html.ValidationMessageFor(model => model.Cities, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" id="btnUpdate" value="Guncelle" class="btn btn-success" />
+
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@section script{
+
+    <script>
+        $(document).ready(function () {
+            $("#btnUpdate").click(function () {
+                var language = "";
+                var skill = "";
+                var city = "";
+                for (var i = 1; i < 4; i++) {
+                    var cboxes = document.getElementById("" + i + "");
+                    cboxes.checked ? language = language + $("#" + i + "").val() + "," : '';
+                    var cboxes1 = document.getElementById("s_" + i + "");
+                    cboxes1.checked ? skill = skill + $("#s_" + i + "").val() + "," : '';
+                    var cboxes2 = document.getElementById("c_" + i + "");
+                    cboxes2.checked ? city = city + $("#c_" + i + "").val() + "," : '';
+                }
+                var updateStudent = {
+                    "Skill": skill,
+                    "Lang": language,
+                    "City": city,
+                    "IsActive": $("#isActive").val(),
+                    "MilitaryState": $("#military").val(),
+                    "MinimumWage": $("#min").val(),
+                    "TotalExperience": $("#total").val(),
+                };
+                $.ajax({
+                    url: "/Student/StudentUpdate/",
+                    type: "POST",
+                    data: updateStudent,
+                    success: function (resp) {
+                        if (resp == "ok") {
+                            window.location.reload();
+                        }
+                        else {
+                            alert("Hesabınız Güncellendi");
+                            console.log(resp);
+                        }
+                    },
+                    error: function (err) {
+                        alert("AJAX İsteği Başarısız oldu");
+                        console.log(err);
+                    }
+                });
+            });
+
+            $("")
+        });
+    </script>
+}

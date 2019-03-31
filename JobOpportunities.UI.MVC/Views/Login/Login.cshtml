@@ -1,0 +1,61 @@
+﻿@using JobOpportunities.Entities
+@model UserAccount
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <div class="main">
+
+
+        <div class="container">
+            <center>
+                <div class="middle">
+                    <div id="login">
+                        <form method="post">
+                            <fieldset class="clearfix">
+                                <strong><span style="color:white;">@ViewBag.Message</span></strong>
+                                <p>
+                                    
+                                    <span class="fa fa-user"></span>
+                                    @Html.TextBoxFor(a => a.Mail, new { @class = "form-control", id = "mail", placeholder = "Kullanıcı Adı" })
+<p>
+                                    <span class="fa fa-lock"></span>  @Html.TextBoxFor(a => a.Password, new { @class = "form-control", id = "pass", placeholder = "Şifre", type = "password" })
+
+                                    <div>
+                                        <span style="width:48%; text-align:left;  display: inline-block;">
+                                            <a class="small-text" href="#">
+                                                Şifremi Unuttum
+                                            </a>
+                                        </span>
+                                        <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="Giriş Yap"></span>
+                                    </div>
+                            </fieldset>
+                            <div class="clearfix"></div>
+                        </form>
+                        <div class="clearfix"></div>
+                    </div> <!-- end login -->
+                    <div class="logo">
+                            
+                        <img src="~/img/LogoAkademi@2x.png" width="400" height="200"/>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </center>
+        </div>
+    </div>
+
+</body>
+</html>

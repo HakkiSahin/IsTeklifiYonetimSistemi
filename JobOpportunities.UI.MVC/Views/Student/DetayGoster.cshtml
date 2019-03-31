@@ -1,0 +1,158 @@
+﻿@model JobOpportunities.UI.MVC.Models.JobOpportunityViewModel
+
+@{
+    ViewBag.Title = "DetayGoster";
+    Layout = "~/Views/Shared/_LayoutStudent.cshtml";
+}
+
+<h2>DetayGoster</h2>
+
+<div>
+    <h4>JobOpportunity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+    <input type="button" id="btnUpdate" value="Onaylıyorum" class="btn btn-success" />
+
+    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" id="Onaylamiyorum" aria-controls="multiCollapseExample1">Onaylamıyorum</a>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    <label> <input type="checkbox" name="chc" id="chc" value="Lokasyon Dolayısıyla"> Lokasyondan Dolayı</label>
+                    <label><input type="checkbox" name="chc2" id="chc2" value="Şirketten Dolayı"> Şirketten Dolayı</label>
+                    <label>
+                        <input type="checkbox" name="chc3" id="chc3" value="Calismak istemiyorum"> Calismak istemiyorum
+                    </label>
+                    <textarea rows="4" cols="50" id="detail" placeholder="Lütfen Diger nedenleriniz varsa buraya giriniz" required></textarea>
+
+                    <input type="button" id="btnNot" value="Yolla" class="btn btn-success" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+</p>
+
+@section script{
+
+    <script>
+        $(document).ready(function () {
+            $("#btnUpdate").click(function () {
+            var updateJob = {
+                "JobOpportunityID": "@Model.JobOpportunityID",
+                "StudentID": "@Model.StudentID"
+            };
+                $.ajax({
+
+                    url: "/Student/Update/",
+                    type: "POST",
+                    data: updateJob,
+                    success: function (resp) {
+                        if (resp == "ok") {
+                            window.location.reload();
+                        }
+                        else {
+                            alert("Kayıt Gerçekleşmedi");
+                            console.log(resp);
+                        }
+                    },
+                    error: function (err) {
+                        alert("AJAX İsteği Başarısız oldu");
+                        console.log(err);
+                    }
+
+                })
+            });
+
+            $("#btnNot").click(function () {
+                var desc="";
+                var cboxes = document.getElementById("chc");
+               cboxes.checked ? desc = desc + $("#chc").val()+"," : '';
+                 cboxes = document.getElementById("chc2");
+                cboxes.checked ? desc = desc +$("#chc2").val() + "," : '';
+                 cboxes = document.getElementById("chc3");
+                cboxes.checked ? desc = desc + $("#chc3").val() + "," : '';
+                desc = desc + $("#detail").val()
+
+                var updateJob = {
+                "JobOpportunityID": "@Model.JobOpportunityID",
+                    "StudentID": "@Model.StudentID",
+                    "Description": desc
+                };
+                $.ajax({
+                    url: "/Student/Update/",
+                    type: "POST",
+                    data: updateJob,
+                    success: function (resp) {
+                        if (resp == "ok") {
+                            window.location.reload();
+                        }
+                        else {
+                            alert("Kayıt Gerçekleşmedi");
+                            console.log(resp);
+                        }
+                    },
+                    error: function (err) {
+                        alert("AJAX İsteği Başarısız oldu");
+                        console.log(err);
+                    }
+                });
+            });
+
+            $("")
+    });
+    </script>
+
+}

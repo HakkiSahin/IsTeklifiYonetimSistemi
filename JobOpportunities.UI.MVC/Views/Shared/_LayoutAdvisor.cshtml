@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>MainPage</title>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <style>
+        .nav-item {
+            width: 200px;
+            height: 50px;
+            margin: 5px;
+        }
+
+        .navbar {
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active btn btn-primary">
+                    <a class="nav-link" href="MainPage">Anasayfa<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active btn btn-primary">
+                    <a class="nav-link" href="JobOpportunityOperations">İş Fırsatı İşlemleri<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active btn btn-primary">
+                    <a class="nav-link" href="StudentOperations">Öğrenci İşlemleri<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active btn btn-primary">
+                    <a class="nav-link" href="ClanOperations">Grup İşlemleri</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                Hoşgeldiniz!
+            </span>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

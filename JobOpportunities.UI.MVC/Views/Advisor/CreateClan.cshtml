@@ -1,0 +1,43 @@
+﻿@model JobOpportunities.Entities.Clan
+
+@{
+    ViewBag.Title = "CreateClan";
+    Layout = "~/Views/Shared/_LayoutAdvisor.cshtml";
+}
+
+<h2>CreateClan</h2>
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.DropDownListFor(a => a.ContractID, (IEnumerable<SelectListItem>)ViewBag.Contracts, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.DropDownListFor(a => a.DepartmentID, (IEnumerable<SelectListItem>)ViewBag.Departments, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(a => a.PortalNo, new { @class = "form-control", placeholder = "Portal No" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(a => a.Term, new { @class = "form-control", placeholder = "Dönem" })
+        </div>
+        <div class="form-group">
+            @Html.TextBoxFor(a => a.GroupClass, new { @class = "form-control", placeholder = "Sınıf Adı" })
+        </div>
+        <div class="form-group">
+            @Html.DropDownListFor(a => a.TeacherID, (IEnumerable<SelectListItem>)ViewBag.Teachers, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </div>
+    }
+</div>
+
+<div>
+    @if (ViewBag.IsSuccess != null)
+    {
+        <span class="alert-danger">Kayıt işlemi başarısız</span>
+    }
+</div>

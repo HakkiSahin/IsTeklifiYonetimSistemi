@@ -1,0 +1,49 @@
+﻿@using JobOpportunities.UI.MVC.ModelViews
+@using JobOpportunities.Entities
+@model  List<ClanListView>
+
+@{
+    ViewBag.Title = "Grup İşlemleri";
+    Layout = "~/Views/Shared/_LayoutAdvisor.cshtml";
+}
+
+<div class="row ml-5">
+    <div class="col-md-2 mt-3">
+        <ul class="list-group">
+            @foreach (Contract item in ViewBag.Contracts)
+            {
+                <li class="list-group-item btn btn-primary">@Html.ActionLink(item.ContractName, "ClanOperations", new { contractID = item.ContractID })</li>
+            }
+        </ul>
+    </div>
+    <div class="col-md-10 mt-3">
+        <div>
+            @Html.ActionLink("Yeni Grup", "CreateClan", null, new { @class = "btn btn-success" })
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Zümre</th>
+                    <th>Portal No</th>
+                    <th>Sınıf</th>
+                    <th>Dönem</th>
+                    <th>Öğretmen</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ClanListView item in Model)
+                {
+                    <tr>
+                        <td>@item.DepartmentName</td>
+                        <td>@item.PortalNo</td>
+                        <td>@item.Class</td>
+                        <td>@item.Term</td>
+                        <td>@item.TeacherName</td>
+                        <td>@Html.ActionLink("Sil", "DeleteClan", new { productID = item.ClanID }, new { @class = "btn btn-danger" })</td>
+                        <td>@Html.ActionLink("Güncelle", "UpdateClan", new { productID = item.ClanID }, new { @class = "btn btn-info" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
