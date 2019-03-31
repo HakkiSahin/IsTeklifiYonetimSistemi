@@ -1,0 +1,12 @@
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\bin\Debug\JobOpportunities.Entities.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\bin\Debug\JobOpportunities.Entities.pdb
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\bin\Debug\JobOpportunities.Core.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\bin\Debug\JobOpportunities.Core.pdb
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\bin\Debug\JobOpportunities.Core.dll.config
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\obj\Debug\JobOpportunities.Entities.csprojAssemblyReference.cache
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\obj\Debug\JobOpportunities.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\obj\Debug\JobOpportunities.Entities.csproj.CopyComplete
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\obj\Debug\JobOpportunities.Entities.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.Entities\obj\Debug\JobOpportunities.Entities.pdb
