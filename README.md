@@ -2,7 +2,7 @@
 
 Sisteme girelen iş tekliflerini uygun öğrencileri seçerek gönderen öğrencilerden de onaylama ve ya onaylamadıysa onaylamama sebebini bekleyen, onaylayan ögrencilerin cv'lerini sistemden indirip iş teklifini veren firmaya mail atan iş teklif yönetim sistemi.
 
-Visual studio kullanılarak ASP.NET MVC teknolojileriyle geliştirilen bir web projesidir. Backend bölümünde Entity Framework - Repository Pattern ve Core Katmanı Kullanılmıştır. Frontend bölümünde ise HTML/CSS ve JS yanında Bootstrap kütüphanesi kullanılmıştır. 
+Visual studio kullanılarak ASP.NET MVC teknolojileriyle geliştirilen bir web projesidir. Backend bölümünde Entity Framework - Repository Pattern ve Core Katmanı kullanılmıştır. Database Code First yöntemi ile oluşturu7lmuştur. Frontend bölümünde ise HTML/CSS ve JS yanında Bootstrap kütüphanesi kullanılmıştır. 
 
 # Danışman Rolü :
 - Sisteme öğrenci ekleyebilir
