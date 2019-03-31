@@ -1,0 +1,17 @@
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.DAL.dll.config
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.DAL.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.DAL.pdb
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.Core.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.Entities.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.Core.pdb
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.Core.dll.config
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\JobOpportunities.Entities.pdb
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\obj\Debug\JobOpportunities.DAL.csprojAssemblyReference.cache
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\obj\Debug\JobOpportunities.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\obj\Debug\JobOpportunities.DAL.csproj.CopyComplete
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\obj\Debug\JobOpportunities.DAL.dll
+C:\Users\Hakki Sahin\Source\Workspaces\JobOpportunitiesBilgeAdam2\JobOpportunities\JobOpportunities.DAL\obj\Debug\JobOpportunities.DAL.pdb
